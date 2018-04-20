@@ -1,0 +1,13 @@
+class Solution 
+{
+    public int removeDuplicates(int[] nums) 
+    {
+        if (nums.length == 0) return 0; //important,easy to forget
+    	int j = 0;
+        for (int i = 1; i < nums.length; i++)
+        {
+        	if (nums[i] != nums[j]) nums[++j] = nums[i];
+        }
+        return j+1; // j is the maxIndex,length = maxIndex + 1.
+    }
+}
